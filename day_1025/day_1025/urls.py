@@ -16,6 +16,20 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from django.shortcuts import HttpResponse, render
+
+def index(request):
+    return HttpResponse("0k")
+
+def login(request):
+    return render(request, 'login.html')
+
+def girl(request):
+    return render(request, '00起飞.html')
+
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^login/', login),
+    url(r'^girl/', girl),
 ]
