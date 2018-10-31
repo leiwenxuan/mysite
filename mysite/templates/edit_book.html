@@ -18,8 +18,11 @@
         <div class="col-sm-5">
             <select name="press_name" id="">
                 {% for press in press_list %}
-{#                     <option value="{{ press.id }}">{{ press.pname }}</option>#}
-                    <option value="{{ press.id }}">{{ press.pname }}</option>
+                    {% if press.id  ==  book.press.id  %}
+                        <option selected value="{{ press.id  }}">{{ press.pname }}</option>
+                    {% else %}
+                        <option value="{{press.id  }}">{{ press.pname }}</option>
+                    {% endif %}
                 {% endfor %}
             </select>
 

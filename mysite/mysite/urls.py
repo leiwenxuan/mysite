@@ -31,5 +31,15 @@ urlpatterns = [
     url(r'^add_book', views.add_book),
     url(r'^del_book', views.del_book),
     url(r'^edit_book', views.edit_book),
+
+
+    #__________day59-----------
+
+    url(r'author_list', views.author_list),
+    url(r'^add_author', views.add_author),
+    url(r'^del_author', views.del_author),
+    url(r'^edit_author', views.edit_author),
+    url(r'^test', views.test),
+
     url(r'', views.book_list),
 ]

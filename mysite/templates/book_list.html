@@ -18,6 +18,10 @@
     <!-- Custom styles for this template -->
     <link href="/static/css/dashboard.css" rel="stylesheet">
 
+    {#    联系我的文件导入#}
+    {#    <link rel="stylesheet" href="/static/css/index.css">#}
+    {#    <link rel="stylesheet" href="/static/css/index.js">#}
+
 </head>
 <body>
 <!--导航条-->
@@ -32,7 +36,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="#"><input type="text" id="i1"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -106,6 +110,13 @@
         <!--右侧列表-->
         <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-2 main">
             <h1 class="page-header">我的后台管理</h1>
+            {#                联系我代码区#}
+            {#            <div id="div1">#}
+            {##}
+            {#                <img src="/static/blog/weixin.jpg" alt="..." class="">#}
+            {#                <span id="share">  <button type="button" class="btn btn-success">联系我</button></span>#}
+            {##}
+            {#            </div>#}
 
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -127,6 +138,9 @@
                             <button type="button" class="btn btn-info">显示出版社</button>
                         </a>
 
+                        <a href="/author_list/">
+                            <button type="button" class="btn btn-info">显示作者</button>
+                        </a>
 
                         <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_press_add">
                             添加出版社
@@ -292,6 +306,19 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/static/css/jquery.js"></script>
     <script src="/static/bootstrap-3.3.7/js/bootstrap.js"></script>
+    <script>
+        function setTime() {
+            // 1. 找到标签
+            var i1Ele = document.getElementById('i1');
+            // 2. 拿到当前时间
+            var now = new Date();
+            // 3. 设置i1标签的value属性为now时间
+            i1Ele.setAttribute('value', now.toLocaleString())
+        }
+
+        // setTime();
+        setInterval(setTime, 1000);
+    </script>
 
 </body>
 </html>
